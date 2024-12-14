@@ -1,0 +1,6 @@
+@SignalR.Covid19Chart.API_HostAddress = http://localhost:5128
+
+GET {{SignalR.Covid19Chart.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

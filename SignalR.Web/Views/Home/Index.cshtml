@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@section Scripts
+{
+    <script src="~/js/signalr-client.js"></script>
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div id="connectionId" class="alert alert-info" role="alert">
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-secondary disabled mx-1 my-1">
+                    Connected Client Count <span id="span-connected-client-count" class="badge bg-secondary"></span>
+                </button>
+            </div>
+            <div class="row">
+                <button class="btn btn-outline-primary mx-1 my-1" id="btn-send-message-all-client">
+                    Tüm Clientlara gönder
+                </button>
+            </div>
+            <div class="row">
+                <button class="btn btn-outline-primary mx-1 my-1" id="btn-send-message-caller-client">
+                    İstek Yapan Clienta gönder
+                </button>
+            </div>
+            <div class="row">
+                <button class="btn btn-outline-primary mx-1 my-1" id="btn-send-message-other-client">
+                    Diğer Clientlara gönder
+                </button>
+            </div>
+            <div class="row">
+                <hr/>
+                <input id="text-connectionId" type="text" class="form-control mx-1 my-1" placeholder="ConnectionId" />
+                <button class="btn btn-outline-primary mx-1 my-1" id="btn-send-message-individual-client">
+                    Belirli Clienta gönder
+                </button>
+            </div>
+            <div class="row">
+                <hr/>
+                <div id="groupList" class="alert alert-warning" role="alert">
+                </div>
+                <div class="form-control d-flex justify-content-between">
+                    <button class="btn btn-outline-success" id="btn-groupA-add">A Grubuna Katıl</button>
+                    <button class="btn btn-outline-danger" id="btn-groupA-remove">A Grubundana Ayrıl</button>
+                    <button class="btn btn-outline-success" id="btn-groupB-add">B Grubuna Katıl</button>
+                    <button class="btn btn-outline-danger" id="btn-groupB-remove">B Grubundan Ayrıl</button>
+                </div>
+                <div class="form-control">
+                    <div>
+                        <button class="btn btn-outline-warning w-100" id="btn-groupA-send-message">A grubuna Mesaj Gönder</button>
+                    </div>
+                    <div>
+                        <button class="btn btn-outline-warning w-100" id="btn-groupB-send-message">B grubuna Mesaj Gönder</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn btn-outline-primary mx-1 my-1" id="btn-send-typed-message-all-client">
+                        Tüm Clientlara gönder (complex type)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

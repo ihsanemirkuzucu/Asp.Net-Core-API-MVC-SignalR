@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "Stream";
+}
+@section Scripts
+{
+    <script src="~/js/signalr-clent-stream.js"></script>
+}
+
+<h1>Stream</h1>
+
+<input class="form-control" id="txt-stream" type="text" value="Ahmet;Mehmer;Hasan;Emre;Cafer"/>
+<button class="btn btn-outline-dark my-2" id="btn-FromClient-ToHub">Data Gönder</button>
+<button class="btn btn-outline-dark my-2" id="btn-FromClient-ToHub2">Product Gönder</button>
+<button class="btn btn-outline-dark my-2" id="btn-FromGub-ToClient">Hubdan Data al</button>
+
+<div class="alert alert-info" id="streamBox">
+
+</div>
